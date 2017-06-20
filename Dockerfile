@@ -9,9 +9,6 @@ ENV composer_hash 669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190
 
 ENV NGINX_VERSION 1.12.0
 
-RUN pecl install swoole && docker-php-ext-enable swoole
-
-
 RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
   && CONFIG="\
     --prefix=/etc/nginx \
